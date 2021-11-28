@@ -3,13 +3,15 @@ using UnityEngine.AI;
 
 public class EnemyAI : MonoBehaviour
 {
+    [Tooltip("Max value of enemy health")]
+    public int maxHealth = 20;
+    [Tooltip("Current health")]
+    public int currentHealth;
+
     public NavMeshAgent agent;
-
     public Transform player;
-
     public LayerMask whatIsGround, whatIsPlayer;
 
-    public float health;
 
     //Patrolling
     public Vector3 walkPoint;
@@ -25,7 +27,7 @@ public class EnemyAI : MonoBehaviour
     public float sightRange, attackRange;
     public bool playerInSightRange, playerInAttackRange;
 
-    private void Awake()
+    private void Start()
     {
         player = GameObject.Find("Player").transform;
         agent.GetComponent<NavMeshAgent>();
@@ -36,6 +38,10 @@ public class EnemyAI : MonoBehaviour
         //Check for sight and attack range
         playerInSightRange = Physics.CheckSphere(transform.position, sightRange, whatIsPlayer);
         playerInAttackRange = Physics.CheckSphere(transform.position, attackRange, whatIsPlayer);
+
+        if (!playerInSightRange && !playerInAttackRange) Patrolling();
+        if (playerInSightRange && !playerInAttackRange) ChasePlayer();
+        if (playerInSightRange && playerInAttackRange) AttackPlayer();
     }
 
     private void SearchWalkPoint()
@@ -53,9 +59,8 @@ public class EnemyAI : MonoBehaviour
 
     private void Patrolling()
     {
-        if (!playerInSightRange && !playerInAttackRange) Patrolling();
-        if (playerInSightRange && !playerInAttackRange) ChasePlayer();
-        if (playerInSightRange && playerInAttackRange) AttackPlayer();
+        if (!walkPointSet) 
+            SearchWalkPoint();
 
         if (walkPointSet)
             agent.SetDestination(walkPoint);
@@ -84,7 +89,7 @@ public class EnemyAI : MonoBehaviour
             // Attack Code
             Rigidbody rb = Instantiate(projectile, transform.position, Quaternion.identity).GetComponent<Rigidbody>();
             rb.AddForce(transform.forward * 32f, ForceMode.Impulse);
-            rb.AddForce(transform.up * 8f, ForceMode.Impulse);
+            //rb.AddForce(transform.up * 8f, ForceMode.Impulse);
             
             alreadyAttacked = true;
             Invoke(nameof(ResetAttack), timeBewtweenAttacks);
@@ -98,9 +103,9 @@ public class EnemyAI : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
-        health -= damage;
+        currentHealth -= damage;
 
-        if (health <= 0) Invoke(nameof(DestroyEnemy), .5f);
+        if (currentHealth <= 0) Invoke(nameof(DestroyEnemy), 0.5f);
     }
 
     private void DestroyEnemy()

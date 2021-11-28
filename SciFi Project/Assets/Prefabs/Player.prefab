@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7399898624744912104}
   - component: {fileID: 7399898624744912105}
   - component: {fileID: 7399898624744912110}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Main Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -110,7 +110,7 @@ GameObject:
   - component: {fileID: 7399898624821819889}
   - component: {fileID: 7399898624821819895}
   - component: {fileID: 7399898624821819888}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -189,7 +189,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7399898625293085774}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: GroundCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -221,9 +221,11 @@ GameObject:
   - component: {fileID: 7399898625589109632}
   - component: {fileID: 7399898625589109633}
   - component: {fileID: 7399898625589109639}
-  m_Layer: 0
+  - component: {fileID: 333484668}
+  - component: {fileID: 3500841384073292678}
+  m_Layer: 6
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -286,6 +288,34 @@ MonoBehaviour:
   groundMask:
     serializedVersion: 2
     m_Bits: 8
+--- !u!114 &333484668
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7399898625589109634}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27452d9488636bb44914350607721f3f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 100
+  currentHealth: 0
+  healthBar: {fileID: 0}
+--- !u!65 &3500841384073292678
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7399898625589109634}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 2.7405972, z: 1}
+  m_Center: {x: 0, y: 0.04884416, z: 0}
 --- !u!1001 &1693423220672613127
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -293,6 +323,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7403755046696388572}
     m_Modifications:
+    - target: {fileID: 5295977805052987934, guid: 7d424821b8706f540bcec95da037ba74, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 5295977806441997832, guid: 7d424821b8706f540bcec95da037ba74, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -341,6 +375,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MuzzleFlash
       objectReference: {fileID: 0}
+    - target: {fileID: 5295977806441997839, guid: 7d424821b8706f540bcec95da037ba74, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7d424821b8706f540bcec95da037ba74, type: 3}
 --- !u!198 &6845234707920399629 stripped
@@ -355,9 +393,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7399898624744912111}
     m_Modifications:
+    - target: {fileID: 1491483911524530, guid: 32ca24d493f79754a94923210f088a44, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 1576634372668950, guid: 32ca24d493f79754a94923210f088a44, type: 3}
       propertyPath: m_Name
       value: Gun
+      objectReference: {fileID: 0}
+    - target: {fileID: 1576634372668950, guid: 32ca24d493f79754a94923210f088a44, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4173107327043250, guid: 32ca24d493f79754a94923210f088a44, type: 3}
       propertyPath: m_RootOrder
