@@ -60,7 +60,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: e09d6d61b45b05647a9723b6655aae72, type: 2}
+  - {fileID: 2100000, guid: 9e8ac0f5bdca87c4baa390a48dfb6f65, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -244,7 +244,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 20
-  health: 0
+  currentHealth: 0
   agent: {fileID: 782156053897536899}
   player: {fileID: 0}
   whatIsGround:

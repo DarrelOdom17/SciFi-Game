@@ -4,17 +4,29 @@ using UnityEngine;
 
 public class Gun : MonoBehaviour
 {
+    // Public variables for gun
     public float damage = 10f;
     public float range = 100f;
     public float impactForce = 30f;
     public float fireRate = 15f;
-    public bool autoFire;
+    public bool autoFire = false;
 
     public Camera fpsCam;
     public ParticleSystem muzzleFlash;
     //public GameObject impactEffect;
 
+    //Timer for auto-fire
     private float nextTimeToFire = 0f;
+
+    // Audio & Animation Variables
+    private AudioSource m_shootingSound;
+    private Animator anim;
+
+    private void Start()
+    {
+        m_shootingSound = GetComponent<AudioSource>();
+        anim = GetComponent<Animator>();
+    }
 
     private void Update()
     {
@@ -25,18 +37,21 @@ public class Gun : MonoBehaviour
 
         if (Input.GetButtonDown("Fire1") && autoFire == false)
         {
+            m_shootingSound.Play();
+            anim.Play("GunFiring");
             Shoot();
         }
 
         if (Input.GetButtonDown("Fire1") && autoFire == true && Time.time >= nextTimeToFire)
         {
+            m_shootingSound.Play();
             nextTimeToFire = Time.time + 1f / fireRate;
             Shoot();
         }
     }
 void Shoot()
     {
-        muzzleFlash.Play();
+        muzzleFlash.Play();              // Plays the muzzle flash when gun is fired
 
         RaycastHit hit;
 
@@ -59,6 +74,7 @@ void Shoot()
         }
     }
 
+    // Toggles the semi-auto to full-auto fire state
     void ToggleShoot()
     {
         if(Input.GetKey(KeyCode.Alpha1))

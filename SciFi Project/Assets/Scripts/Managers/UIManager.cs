@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.SceneManagement;
@@ -12,6 +10,13 @@ public class UIManager : MonoBehaviour
     [SerializeField]
     GameObject mainMenuButton;
 
+    public static UIManager instance;
+    [SerializeField]
+    TextMeshProUGUI killedCounter_TMP;
+
+    [HideInInspector]
+    public int killCount;
+
     [SerializeField]
     GameObject menuLayout;
 
@@ -20,6 +25,17 @@ public class UIManager : MonoBehaviour
     /// </summary>
     public static bool gameIsPaused = false;
 
+    private void Awake()
+    {
+        if (instance = null)
+        {
+            instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
     private void Update()
     {
         if (Input.GetButtonDown("Cancel"))
@@ -73,5 +89,10 @@ public class UIManager : MonoBehaviour
 
 #endif
         Debug.Log("Game has closed!");
+    }
+
+    public void UpdateKilledCounterUI()
+    {
+        killedCounter_TMP.text = killCount.ToString();
     }
 }
