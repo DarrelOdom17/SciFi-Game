@@ -11,6 +11,7 @@ public class UIManager : MonoBehaviour
     GameObject mainMenuButton;
 
     public static UIManager instance;
+
     [SerializeField]
     TextMeshProUGUI killedCounter_TMP;
 
@@ -19,6 +20,8 @@ public class UIManager : MonoBehaviour
 
     [SerializeField]
     GameObject menuLayout;
+
+    Target target;
 
     /// <summary>
     /// References a variable state across all classes
@@ -93,6 +96,7 @@ public class UIManager : MonoBehaviour
 
     public void UpdateKilledCounterUI()
     {
+        killCount = target.SetKillCount();
         killedCounter_TMP.text = killCount.ToString();
     }
 }

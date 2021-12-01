@@ -2317,7 +2317,6 @@ GameObject:
   - component: {fileID: 965327791}
   - component: {fileID: 965327790}
   - component: {fileID: 965327789}
-  - component: {fileID: 965327793}
   m_Layer: 5
   m_Name: PlayerCanvas
   m_TagString: Untagged
@@ -2409,20 +2408,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!114 &965327793
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 965327788}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ac6be942e0c832b43b9e2db3a36de0cf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemiesKilledText: {fileID: 0}
-  enemiesLeftText: {fileID: 0}
 --- !u!1001 &1024279869
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4206,6 +4191,10 @@ PrefabInstance:
       propertyPath: m_Acceleration
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 782156053897536902, guid: c98afc8f08dbfd748891ef18f602b73a, type: 3}
+      propertyPath: manager
+      value: 
+      objectReference: {fileID: 1999894816}
     - target: {fileID: 782156053897537017, guid: c98afc8f08dbfd748891ef18f602b73a, type: 3}
       propertyPath: m_Name
       value: Enemy
@@ -4434,6 +4423,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4676472130311744, guid: 2620bdc8e640a444aa98776a364da7b3, type: 3}
   m_PrefabInstance: {fileID: 1936809333}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1999894816 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4288378884483951014, guid: 54a4dabb3cae3784cbe27d2d5645c563, type: 3}
+  m_PrefabInstance: {fileID: 4288378882813132968}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8287ffc7c0951d748a4926acf6609df3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2093788350
 PrefabInstance:
   m_ObjectHideFlags: 0
