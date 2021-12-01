@@ -476,6 +476,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 5295977806441997839, guid: 7d424821b8706f540bcec95da037ba74, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7d424821b8706f540bcec95da037ba74, type: 3}
 --- !u!198 &6845234707920399629 stripped
@@ -578,25 +582,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4173107327043250, guid: 32ca24d493f79754a94923210f088a44, type: 3}
   m_PrefabInstance: {fileID: 7399898624539132270}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &7399898625611988629
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7400576815858171768}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 10deab91285963845a50e1374fdf5e6f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damage: 10
-  range: 100
-  impactForce: 60
-  fireRate: 15
-  autoFire: 0
-  fpsCam: {fileID: 7399898624744912104}
-  muzzleFlash: {fileID: 6845234707920399629}
 --- !u!82 &7399898625666144669
 AudioSource:
   m_ObjectHideFlags: 0
@@ -712,3 +697,22 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &7399898625611988629
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7400576815858171768}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10deab91285963845a50e1374fdf5e6f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 10
+  range: 100
+  impactForce: 60
+  fireRate: 15
+  autoFire: 0
+  fpsCam: {fileID: 7399898624744912104}
+  muzzleFlash: {fileID: 6845234707920399629}

@@ -1,13 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
     [Tooltip("Max value of health")]
     public int maxHealth = 100;
     [Tooltip("Current Health")]
-    public int currentHealth;
+    public int currentHealth; 
 
     public HealthBar healthBar;
     //public 
@@ -23,7 +25,7 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       
+        HandleDeath();
     }
 
     public void TakeDamage(int damage)
@@ -32,11 +34,12 @@ public class Player : MonoBehaviour
         healthBar.SetHealth(currentHealth);
     }
 
-    //public void HandleDeath()
-    //{
-    //    if (currentHealth <= 0)
-    //    {
-    //        agent.enabled = false;
-    //    }
-    //}
+    public void HandleDeath()
+    {
+        if (currentHealth <= 0)
+        {
+            Time.timeScale = 0f;
+            //SceneManager.LoadScene("MainMenu");
+        }
+    }
 }

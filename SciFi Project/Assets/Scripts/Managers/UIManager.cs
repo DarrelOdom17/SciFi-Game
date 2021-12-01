@@ -13,15 +13,14 @@ public class UIManager : MonoBehaviour
     public static UIManager instance;
 
     [SerializeField]
-    TextMeshProUGUI killedCounter_TMP;
+    TextMeshProUGUI enemyCounter_TMP;
 
     [HideInInspector]
-    public int killCount;
+    public int enemyCount;
 
     [SerializeField]
     GameObject menuLayout;
 
-    Target target;
 
     /// <summary>
     /// References a variable state across all classes
@@ -30,7 +29,7 @@ public class UIManager : MonoBehaviour
 
     private void Awake()
     {
-        if (instance = null)
+        if (instance == null)
         {
             instance = this;
         }
@@ -39,6 +38,7 @@ public class UIManager : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
     private void Update()
     {
         if (Input.GetButtonDown("Cancel"))
@@ -48,6 +48,8 @@ public class UIManager : MonoBehaviour
             else
                 Resume();
         }
+
+        enemyCounter_TMP.text = "Enemies Left: " + enemyCount;
     }
 
     public void StartGame()
@@ -92,11 +94,5 @@ public class UIManager : MonoBehaviour
 
 #endif
         Debug.Log("Game has closed!");
-    }
-
-    public void UpdateKilledCounterUI()
-    {
-        killCount = target.SetKillCount();
-        killedCounter_TMP.text = killCount.ToString();
     }
 }

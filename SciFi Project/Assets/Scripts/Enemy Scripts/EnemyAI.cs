@@ -9,7 +9,7 @@ public class EnemyAI : MonoBehaviour
     public int currentHealth;
 
     public NavMeshAgent agent;
-    public Transform player;
+    private Transform player;
     public LayerMask whatIsGround, whatIsPlayer;
 
 

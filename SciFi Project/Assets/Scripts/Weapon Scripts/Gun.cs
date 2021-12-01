@@ -7,7 +7,7 @@ public class Gun : MonoBehaviour
     // Public variables for gun
     public float damage = 10f;
     public float range = 100f;
-    public float impactForce = 30f;
+    public float impactForce = 15f;
     public float fireRate = 15f;
     public bool autoFire = false;
 
@@ -45,6 +45,7 @@ public class Gun : MonoBehaviour
         if (Input.GetButtonDown("Fire1") && autoFire == true && Time.time >= nextTimeToFire)
         {
             m_shootingSound.Play();
+            anim.Play("GunFiring");
             nextTimeToFire = Time.time + 1f / fireRate;
             Shoot();
         }

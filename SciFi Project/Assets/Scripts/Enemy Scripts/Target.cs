@@ -8,11 +8,12 @@ public class Target : MonoBehaviour
     public float health = 20f;
     private int killCount;
 
-    public UIManager manager;
+    private UIManager manager;
 
     private void Start()
     {
-     
+        manager = GameObject.Find("GameManager").GetComponent<UIManager>();
+        manager.enemyCount++;
     }
 
     public void TakeDamage(float amount)
@@ -26,15 +27,7 @@ public class Target : MonoBehaviour
 
     void Die()
     {
-        if(health <= 0)
+        manager.enemyCount--;
         Destroy(gameObject);
-        //killCount++;
-        manager.UpdateKilledCounterUI();
-    }
-
-    public int SetKillCount()
-    {
-        killCount++;
-        return killCount;
     }
 }
