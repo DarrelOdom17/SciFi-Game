@@ -30,9 +30,9 @@ public class Gun : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKey(KeyCode.Alpha1))
+        if (Input.GetKeyDown(KeyCode.Tab)) 
         {
-            autoFire = true;
+            autoFire = !autoFire;       // Toggles the auto-fire function
         }
 
         if (Input.GetButtonDown("Fire1") && autoFire == false)
@@ -42,7 +42,7 @@ public class Gun : MonoBehaviour
             Shoot();
         }
 
-        if (Input.GetButtonDown("Fire1") && autoFire == true && Time.time >= nextTimeToFire)
+        if (Input.GetButton("Fire1") && autoFire == true && Time.time >= nextTimeToFire)
         {
             m_shootingSound.Play();
             anim.Play("GunFiring");
@@ -72,15 +72,6 @@ void Shoot()
             }
             //GameObject impactGO = Instantiate(impactEffect, hit.point, Quaternion.LookRotation(hit.normal));
            // Destroy(impactGO, 2f);
-        }
-    }
-
-    // Toggles the semi-auto to full-auto fire state
-    void ToggleShoot()
-    {
-        if(Input.GetKey(KeyCode.Alpha1))
-        {
-            autoFire = !autoFire;
         }
     }
 }
