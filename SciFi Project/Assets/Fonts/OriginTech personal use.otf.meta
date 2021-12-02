@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 66873743539028a418cb1e04fff0fb77
+guid: 63ff1b532b0562f48911e2175a8d1b89
 TrueTypeFontImporter:
   externalObjects: {}
   serializedVersion: 4
@@ -9,8 +9,9 @@ TrueTypeFontImporter:
   characterPadding: 1
   includeFontData: 1
   fontNames:
-  - FairydustB
-  fallbackFontReferences: []
+  - Origin Tech Demo
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 6355f1ae422c2f54e99d377e5a8e22df, type: 3}
   customCharacters: 
   fontRenderingMode: 0
   ascentCalculationMode: 1

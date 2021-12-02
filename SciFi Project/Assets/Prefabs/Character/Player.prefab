@@ -109,10 +109,10 @@ AudioSource:
   m_GameObject: {fileID: 7399898624744912106}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24300002, guid: 5e596b46f5c0ac54bb0fe6a3eb2c8487, type: 2}
   m_audioClip: {fileID: 8300000, guid: 4c424c6ee7b4fb94faf19df974f7e722, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.4
+  m_Volume: 0.2
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -430,11 +430,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5295977806441997832, guid: 7d424821b8706f540bcec95da037ba74, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -0.06666666
       objectReference: {fileID: 0}
     - target: {fileID: 5295977806441997832, guid: 7d424821b8706f540bcec95da037ba74, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.0666666
+      value: 0.05
       objectReference: {fileID: 0}
     - target: {fileID: 5295977806441997832, guid: 7d424821b8706f540bcec95da037ba74, type: 3}
       propertyPath: m_LocalPosition.z
@@ -594,7 +594,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 92d35fe1c59bbd14eaee9e3d3b54cea7, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -711,7 +711,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 10
   range: 100
-  impactForce: 60
+  impactForce: 15
   fireRate: 15
   autoFire: 0
   fpsCam: {fileID: 7399898624744912104}

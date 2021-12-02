@@ -8,11 +8,11 @@ public class Target : MonoBehaviour
     public float health = 20f;
     private int killCount;
 
-    private UIManager manager;
+    private PauseMenu manager;
 
     private void Start()
     {
-        manager = GameObject.Find("GameManager").GetComponent<UIManager>();
+        manager = GameObject.Find("GameUI").GetComponent<PauseMenu>();
         manager.enemyCount++;
     }
 

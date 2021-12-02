@@ -192,10 +192,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 2
+  m_Radius: 0.612188
+  m_Height: 2.354663
   m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: -0.013235211, y: 0.038030297, z: 0}
 --- !u!114 &782156053897536902
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -246,7 +246,6 @@ MonoBehaviour:
   maxHealth: 20
   currentHealth: 0
   agent: {fileID: 782156053897536899}
-  player: {fileID: 0}
   whatIsGround:
     serializedVersion: 2
     m_Bits: 128
@@ -276,4 +275,4 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
