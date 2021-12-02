@@ -6,9 +6,9 @@ using UnityEngine.UI;
 public class Target : MonoBehaviour
 {
     public float health = 20f;
-    private int killCount;
 
     private PauseMenu manager;
+    private WinGame winManager;
 
     private void Start()
     {
