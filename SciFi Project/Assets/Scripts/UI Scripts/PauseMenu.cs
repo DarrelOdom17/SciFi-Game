@@ -26,6 +26,7 @@ public class PauseMenu : MonoBehaviour
     private GameObject gun;
     private MouseLook cursorLock;
     private GameObject winCanvas;
+    private GameObject[] enemy;
 
 
     /// <summary>
@@ -35,6 +36,7 @@ public class PauseMenu : MonoBehaviour
 
     private void Start()
     {
+        enemy = GameObject.FindGameObjectsWithTag("Enemy");
         menuLayout.SetActive(false);
         playerCanvas = GameObject.Find("PlayerCanvas");
         gun = GameObject.Find("Gun");
@@ -57,12 +59,11 @@ public class PauseMenu : MonoBehaviour
             enemyCounter_TMP.text = "Enemies Left: " + enemyCount;
         }
 
-        if (enemyCount <= 0)
+        if (enemy.Length == 0)
         {
             winCanvas.SetActive(true);
             Time.timeScale = 0f;
         }
-
     }
 
     public void Pause()
