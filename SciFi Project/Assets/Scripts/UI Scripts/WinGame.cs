@@ -6,21 +6,25 @@ using TMPro;
 
 public class WinGame : MonoBehaviour
 {
-    //public int enemyCount;
-    //private GameObject winCanvas;
+    [HideInInspector]
+    public int enemyCount;
 
-    //private void Start()
-    //{
-    //    enemyCount = GameObject.Find("WinCanvas").GetComponent<WinGame>();
-    //}
+    private GameObject winCanvas;
+    private GameObject enemy;
 
-    //// Update is called once per frame
-    //void Update()
-    //{
-    //    if (enemyCount <= 0)
-    //    {
-    //        winCanvas.gameObject.SetActive(true);
-    //        Time.timeScale = 0f;
-    //    }
-    //}
+    private void Start()
+    {
+        enemy = GameObject.FindGameObjectWithTag("Enemy");
+        winCanvas = GameObject.Find("WinCanvas");
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        if (GameObject.FindGameObjectsWithTag("Enemy") == null)
+        {
+            winCanvas.gameObject.SetActive(true);
+            Time.timeScale = 0f;
+        }
+    }
 }
