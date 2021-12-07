@@ -191,11 +191,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f1204007cfe5dd4fb0c67d675418d93, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &137822441 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8586727606555004534, guid: b807fd99610766d4ca3476d0f9af3e09, type: 3}
-  m_PrefabInstance: {fileID: 364589121}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &150026206
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -358,61 +353,9 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 784866675590978793, guid: b807fd99610766d4ca3476d0f9af3e09, type: 3}
-      propertyPath: enemy
-      value: 
-      objectReference: {fileID: 1902017960}
-    - target: {fileID: 784866675590978793, guid: b807fd99610766d4ca3476d0f9af3e09, type: 3}
-      propertyPath: quitButton
-      value: 
-      objectReference: {fileID: 137822441}
-    - target: {fileID: 784866675590978793, guid: b807fd99610766d4ca3476d0f9af3e09, type: 3}
       propertyPath: enemyCounter_TMP
       value: 
       objectReference: {fileID: 1684629178}
-    - target: {fileID: 2352163770291286121, guid: b807fd99610766d4ca3476d0f9af3e09, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4206155142043665396, guid: b807fd99610766d4ca3476d0f9af3e09, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4206155142043665396, guid: b807fd99610766d4ca3476d0f9af3e09, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4206155142204421278, guid: b807fd99610766d4ca3476d0f9af3e09, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4206155142204421278, guid: b807fd99610766d4ca3476d0f9af3e09, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4206155143481779862, guid: b807fd99610766d4ca3476d0f9af3e09, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4206155143481779862, guid: b807fd99610766d4ca3476d0f9af3e09, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4206155143481779862, guid: b807fd99610766d4ca3476d0f9af3e09, type: 3}
-      propertyPath: m_AnchorMin.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4206155143730938227, guid: b807fd99610766d4ca3476d0f9af3e09, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4206155143730938227, guid: b807fd99610766d4ca3476d0f9af3e09, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4206155143730938227, guid: b807fd99610766d4ca3476d0f9af3e09, type: 3}
-      propertyPath: m_AnchorMin.x
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 8586727608004714969, guid: b807fd99610766d4ca3476d0f9af3e09, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -1375,24 +1318,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 142e43a6ffff11641ab42d806d2c5570, type: 3}
---- !u!1 &1430959965 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1495204921016419782, guid: cc1b523785e9c464d9f0e1565e65d21d, type: 3}
-  m_PrefabInstance: {fileID: 3507964857317644022}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1430959970
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1430959965}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4aaf9b37bec497448b937ebe30cb1a08, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemyCount: 0
 --- !u!1 &1547565612
 GameObject:
   m_ObjectHideFlags: 0
@@ -1736,11 +1661,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c98afc8f08dbfd748891ef18f602b73a, type: 3}
---- !u!1 &1902017960 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 782156053897537017, guid: c98afc8f08dbfd748891ef18f602b73a, type: 3}
-  m_PrefabInstance: {fileID: 1645810942}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1917005822
 GameObject:
   m_ObjectHideFlags: 0
@@ -1925,10 +1845,6 @@ PrefabInstance:
     - target: {fileID: 1495204921016419782, guid: cc1b523785e9c464d9f0e1565e65d21d, type: 3}
       propertyPath: m_Name
       value: WinCanvas
-      objectReference: {fileID: 0}
-    - target: {fileID: 1495204921016419782, guid: cc1b523785e9c464d9f0e1565e65d21d, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5683288941457191088, guid: cc1b523785e9c464d9f0e1565e65d21d, type: 3}
       propertyPath: m_Pivot.x
@@ -2175,10 +2091,6 @@ PrefabInstance:
     - target: {fileID: 7378535743932462327, guid: 100e550e8174c1142972f581480420d9, type: 3}
       propertyPath: m_Name
       value: PlayerCanvas
-      objectReference: {fileID: 0}
-    - target: {fileID: 7378535743932462327, guid: 100e550e8174c1142972f581480420d9, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 100e550e8174c1142972f581480420d9, type: 3}
