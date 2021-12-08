@@ -8,7 +8,7 @@ public class Gun : MonoBehaviour
     public float damage = 10f;
     public float range = 100f;
     public float impactForce = 15f;
-    public float fireRate = 15f;
+    public float fireRate = 5f;
     public bool autoFire = false;
 
     public Camera fpsCam;
@@ -46,7 +46,7 @@ public class Gun : MonoBehaviour
         {
             m_shootingSound.Play();
             anim.Play("GunFiring");
-            nextTimeToFire = Time.time + 1f / fireRate;
+            nextTimeToFire = Time.time + 2f / fireRate;
             Shoot();
         }
     }
@@ -71,7 +71,7 @@ void Shoot()
                 hit.rigidbody.AddForce(-hit.normal * impactForce);
             }
             //GameObject impactGO = Instantiate(impactEffect, hit.point, Quaternion.LookRotation(hit.normal));
-           // Destroy(impactGO, 2f);
+            //Destroy(impactGO, 2f);
         }
     }
 }

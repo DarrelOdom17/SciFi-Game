@@ -208,7 +208,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ed88938455085441b8eeb7f2cea4c4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 20
+  health: 150
 --- !u!195 &782156053897536899
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -243,7 +243,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 035a8e6de9160974d843680f031d7b0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 20
+  maxHealth: 150
   currentHealth: 0
   agent: {fileID: 782156053897536899}
   whatIsGround:
