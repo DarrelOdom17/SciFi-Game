@@ -310,22 +310,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 5156139626781981327, guid: bdcf8012fc7dc6645b40d27726fe37fe, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5156139626781981327, guid: bdcf8012fc7dc6645b40d27726fe37fe, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 221
-      objectReference: {fileID: 0}
-    - target: {fileID: 9065261537300212379, guid: bdcf8012fc7dc6645b40d27726fe37fe, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9065261537300212379, guid: bdcf8012fc7dc6645b40d27726fe37fe, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -86
-      objectReference: {fileID: 0}
     - target: {fileID: 9065261537750772344, guid: bdcf8012fc7dc6645b40d27726fe37fe, type: 3}
       propertyPath: m_Name
       value: UIMenuV3
